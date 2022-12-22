@@ -1,0 +1,76 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.uppertools.bubbles</groupId>
+	<artifactId>Bubbles</artifactId>
+	<version>1</version>
+	<name>Bubbles</name>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<officefloor-version>3.0.0</officefloor-version>
+		<compiler-version>3.7.0</compiler-version>
+		<failsafe-version>2.21.0</failsafe-version>
+		<junit-version>4.12</junit-version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>net.officefloor.web</groupId>
+			<artifactId>woof</artifactId>
+			<version>${officefloor-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit-version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<!-- Standard JVM for compilation -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${compiler-version}</version>
+				<configuration>
+					<source>8</source>
+					<target>8</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<!-- Run integrations -->
+				<groupId>net.officefloor.maven</groupId>
+				<artifactId>officefloor-maven-plugin</artifactId>
+				<version>${officefloor-version}</version>
+				<executions>
+					<execution>
+						<id>open</id>
+						<goals>
+							<goal>open</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>close</id>
+						<goals>
+							<goal>close</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<!-- Run integration tests -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-failsafe-plugin</artifactId>
+				<version>${failsafe-version}</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>integration-test</goal>
+							<goal>verify</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>
