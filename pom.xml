@@ -5,14 +5,17 @@
 	<artifactId>bubbles</artifactId>
 	<version>1</version>
 	<name>bubbles</name>
+	<build>
+        	<sourceDirectory>bububbles-for-android/src</sourceDirectory>
+    	</build>
 	<distributionManagement>
-	<repository>
-      <uniqueVersion>false</uniqueVersion>
-      <id>github</id>
-      <name>uppertools</name>
-      <url>https://maven.pkg.github.com/uppertools/bubbles-for-android</url>
-      <layout>default</layout>
-    </repository>
+		<repository>
+		  <uniqueVersion>false</uniqueVersion>
+		  <id>github</id>
+		  <name>uppertools</name>
+		  <url>https://maven.pkg.github.com/uppertools/bubbles-for-android</url>
+		  <layout>default</layout>
+		</repository>
 	</distributionManagement>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
