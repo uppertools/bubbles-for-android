@@ -5,9 +5,6 @@
 	<artifactId>bubbles</artifactId>
 	<version>1</version>
 	<name>bubbles</name>
-	<build>
-        	<sourceDirectory>bububbles-for-android/src</sourceDirectory>
-    	</build>
 	<distributionManagement>
 		<repository>
 		  <uniqueVersion>false</uniqueVersion>
@@ -38,6 +35,7 @@
 		</dependency>
 	</dependencies>
 	<build>
+		<sourceDirectory>bububbles-for-android/src</sourceDirectory>
 		<plugins>
 			<plugin>
 				<!-- Standard JVM for compilation -->
