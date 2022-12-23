@@ -4,7 +4,7 @@
 	<groupId>com.uppertools.bubbles</groupId>
 	<artifactId>bubbles</artifactId>
 	<version>1</version>
-	<name>Bubbles</name>
+	<name>bubbles</name>
 	<distributionManagement>
 	<repository>
       <uniqueVersion>false</uniqueVersion>
